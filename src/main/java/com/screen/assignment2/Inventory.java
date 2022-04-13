@@ -12,6 +12,24 @@ public class Inventory {
         screens = new ArrayList<>();
         mobileScreens = new ArrayList<>();
         computerScreens = new ArrayList<>();
+
+        Screen screen1 = new Screen(1080, 1920, 27.2, "Samsung", "IPS", 120, 144);
+        Screen screen2 = new Screen(1440, 2560, 24.5, "Acer Predator", "VA", 135, 240);
+
+        screens.add(screen1);
+        screens.add(screen2);
+
+        AspectRatio aspectRatio = new AspectRatio(16, 9);
+        ComputerScreen comp1 = new ComputerScreen(1080, 1920, 27.2, "Samsung", "IPS", 120, 144, 94, aspectRatio, 5, "GSYNC");
+        ComputerScreen comp2 = new ComputerScreen(1440, 2560, 24.5, "Acer Predator", "VA", 135, 240, 75, aspectRatio, 2, "FREESYNC");
+
+        computerScreens.add(comp1);
+        computerScreens.add(comp2);
+
+        MobileScreen mob1 = new MobileScreen(1920, 1080, 6.1, "Samsung", "OLED", 15, 90, 350, 275, "NOTCH");
+        MobileScreen mob2 = new MobileScreen(3640, 2160, 6.5, "LG", "AMOLED", 20, 75, 310, 381, "Punch-hole");
+        mobileScreens.add(mob1);
+        mobileScreens.add(mob2);
     }
 
     public void addScreen(Screen screenObject){
@@ -26,28 +44,27 @@ public class Inventory {
         computerScreens.add(computerScreenScreenObject);
     }
 
+    public ArrayList<Screen> getScreenList() {
+        return screens;
+    }
+    public ArrayList<ComputerScreen> getComputerScreenList() {
+        return computerScreens;
+    }
+    public ArrayList<MobileScreen> getMobileScreenList() {
+        return mobileScreens;
+    }
+
+
     public int getScreens(){
-        int sum = 0;
-        for(int i = 0;i < screens.size(); i++){
-            sum++;
-        }
-        return sum;
+        return screens.size();
     }
 
     public int getMobileScreens(){
-        int sum = 0;
-        for(int i = 0;i < mobileScreens.size(); i++){
-            sum++;
-        }
-        return sum;
+        return mobileScreens.size();
     }
 
     public int getComputerScreens(){
-        int sum = 0;
-        for(int i = 0;i < computerScreens.size(); i++){
-            sum++;
-        }
-        return sum;
+        return computerScreens.size();
     }
 
     public int getTotal(){

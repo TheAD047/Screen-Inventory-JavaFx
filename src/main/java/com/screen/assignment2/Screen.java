@@ -26,15 +26,15 @@ public class Screen
 
     /* Custom constructor to instantiate a screen object
     **/
-    public Screen(int verticalResolution, int horizontalResolution, double screenSize, String manufacturer, String panelType, int wattage, int refreshRate)
+    public Screen(int $verticalResolution, int $horizontalResolution, double $screenSize, String $manufacturer, String $panelType, int $wattage, int $refreshRate)
     {
-        setVerticalResolution(this.verticalResolution);
-        setHorizontalResolution(this.horizontalResolution);
-        setScreenSize(this.screenSize);
-        setManufacturer(this.manufacturer);
-        setPanelType(this.panelType);
-        setWattage(this.wattage);
-        setRefreshRate(this.refreshRate);
+        setVerticalResolution($verticalResolution);
+        setHorizontalResolution($horizontalResolution);
+        setScreenSize($screenSize);
+        setManufacturer($manufacturer);
+        setPanelType($panelType);
+        setWattage($wattage);
+        setRefreshRate($refreshRate);
     }
 
     /* setter methods for all the attributes except for panelList
@@ -47,7 +47,7 @@ public class Screen
     {
         return verticalResolution;
     }
-    public double getScreenSize()
+    public Double getScreenSize()
     {
         return screenSize;
     }
@@ -70,75 +70,79 @@ public class Screen
 
     /* Setter methods for every attribute (except for panelList) with verification
     **/
-    public void setHorizontalResolution(int horizontalResolution)
+    public void setHorizontalResolution(int $horizontalResolution)
     {
-        if(this.horizontalResolution >= 640) {
-            this.horizontalResolution = horizontalResolution;
+        if($horizontalResolution >= 640) {
+            horizontalResolution = $horizontalResolution;
         }
         else{
             throw new IllegalArgumentException("The horizontal resolution cant be lower than 640...");
         }
     }
-    public void setVerticalResolution(int verticalResolution)
+    public void setVerticalResolution(int $verticalResolution)
     {
-        if(this.verticalResolution >= 480) {
-            this.verticalResolution = verticalResolution;
+        if($verticalResolution >= 480) {
+            verticalResolution = $verticalResolution;
         }
         else{
             throw new IllegalArgumentException("The vertical resolution cannot be lower than 460...");
         }
     }
-    public void setScreenSize(double screenSize)
+    public void setScreenSize(double $screenSize)
     {
-        if(this.screenSize >= 4.2) {
-            this.screenSize = screenSize;
+        if($screenSize >= 4.2) {
+            screenSize = $screenSize;
         }
         else{
             throw new IllegalArgumentException("Screen size cant be lees than 4.2 inches...");
         }
     }
-    public void setManufacturer(String manufacturer) {
-        if (this.manufacturer.length() > 1) {
-            this.manufacturer = manufacturer;
+    public void setManufacturer(String $manufacturer) {
+        if ($manufacturer.length() > 1) {
+            manufacturer = $manufacturer;
         }
         else{
             throw new IllegalArgumentException("Manufacturer name should have at least 2 characters...");
         }
     }
-    public void setPanelType(String panelType)
+    public void setPanelType(String $panelType)
     {
         int check = 0;
-        this.panelType = this.panelType.trim();
-        this.panelType = this.panelType.toUpperCase();
+        $panelType = $panelType.trim();
+        $panelType = $panelType.toUpperCase();
         for (String s : panelList) {
-            if (this.panelType.equals(s)) {
+            if ($panelType.equals(s)) {
                 check = 1;
                 break;
             }
         }
         if(check == 1)
         {
-            this.panelType = panelType;
+            panelType = $panelType;
         }
         else
         {
             throw new IllegalArgumentException("Panel Type doesnt match any of the available types...");
         }
     }
-    public void setWattage(int wattage) {
-        if (this.wattage >= 15) {
-            this.wattage = wattage;
+    public void setWattage(int $wattage) {
+        if ($wattage>= 15) {
+            wattage = $wattage;
         }
         else{
             throw new IllegalArgumentException("Wattage cannot be less than 15...");
         }
     }
-    public void setRefreshRate(int refreshRate) {
-        if (this.refreshRate >= 60) {
-            this.refreshRate = refreshRate;
+    public void setRefreshRate(int $refreshRate) {
+        if ($refreshRate >= 60) {
+            refreshRate = $refreshRate;
         }
         else{
             throw new IllegalArgumentException("Refresh Rate cannot be less than 60Hz...");
         }
+    }
+
+    public String getResolutionString() {
+        return horizontalResolution + " x " + verticalResolution;
     }
 }
