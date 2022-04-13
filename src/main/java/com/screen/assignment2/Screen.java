@@ -1,5 +1,7 @@
 package com.screen.assignment2;
 
+import com.google.gson.annotations.SerializedName;
+
 /**Name: Arin Dhiman
  * Student no.: 2004897090
  * Date: 02/04/2022 Sat
@@ -108,6 +110,8 @@ public class Screen
     public void setPanelType(String $panelType)
     {
         int check = 0;
+
+        //making the check case independent
         $panelType = $panelType.trim();
         $panelType = $panelType.toUpperCase();
         for (String s : panelList) {
@@ -116,8 +120,10 @@ public class Screen
                 break;
             }
         }
+
         if(check == 1)
         {
+            //if panel type matches the one on list
             panelType = $panelType;
         }
         else
@@ -142,6 +148,10 @@ public class Screen
         }
     }
 
+    /**
+     * Special method to return a string representation of resolution
+     * The reason for not making a separate object is for quality of life instead of making a new object define the attributes within this class
+     */
     public String getResolutionString() {
         return horizontalResolution + " x " + verticalResolution;
     }
