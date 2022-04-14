@@ -17,7 +17,7 @@ public class MobileScreen extends Screen
     private int maxBrightness;
     private int pixelDensity;
     private String cameraSupport;
-    private String[] supportList = {"PUNCH-HOLE","NOTCH","UNDER-SCREEN"};
+    private String[] supportList = {"PUNCH-HOLE","NOTCH","UNDER-SCREEN", "NONE"};
 
     /**
      * Constructor to pass in attributes for parent class and this derived class

@@ -5,11 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.FileReader;
 import java.io.IOException;
 
 
-public class AutomatedTest extends Application{
+public class Main extends Application{
 
     public static void main(String[] args)  {
         //FileHandler response = FileHandler.getScreenFromFile("ObjectList.json");
@@ -18,7 +17,7 @@ public class AutomatedTest extends Application{
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AutomatedTest.class.getResource("ScreenGUI.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ScreenGUI.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Screen GUI");
         stage.setScene(scene);

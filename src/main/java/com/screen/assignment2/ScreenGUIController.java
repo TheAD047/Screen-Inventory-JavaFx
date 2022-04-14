@@ -121,13 +121,32 @@ public class ScreenGUIController implements Initializable {
      */
     @FXML
     void ViewNextScreen(ActionEvent event) {
-        if(current < screenList.size() - 1) {
-            current++;
-            view();
+        if(selectedObject == 0) {
+            if (current < screenList.size() - 1) {
+                current++;
+                view();
+            } else {
+                //to communicate to the user that no more objects left to show
+                LabelForTop.setText("No More Screens Up there...");
+            }
         }
-        else {
-            //to communicate to the user that no more objects left to show
-            LabelForTop.setText("No More Screens Up there...");
+        else if(selectedObject == 1) {
+            if (current < computerScreenList.size() - 1) {
+                current++;
+                view();
+            } else {
+                //to communicate to the user that no more objects left to show
+                LabelForTop.setText("No More Screens Up there...");
+            }
+        }
+        else if(selectedObject == 2) {
+            if (current < mobileScreenList.size() - 1) {
+                current++;
+                view();
+            } else {
+                //to communicate to the user that no more objects left to show
+                LabelForTop.setText("No More Screens Up there...");
+            }
         }
     }
 
@@ -136,11 +155,10 @@ public class ScreenGUIController implements Initializable {
      */
     @FXML
     void ViewPrevScreen(ActionEvent event) {
-        if(current > 0) {
+        if (current > 0) {
             current--;
             view();
-        }
-        else{
+        } else {
             //to communicate to the user that no more objects left to show
             LabelForTop.setText("No More Screens Back there...");
         }
@@ -229,14 +247,17 @@ public class ScreenGUIController implements Initializable {
 
         if(object.toLowerCase().equals("screen")) {
             selectedObject = 0;
+            current = 0;
             view();
         }
         else if(object.trim().equalsIgnoreCase("computer Screen")) {
             selectedObject = 1;
+            current = 0;
             view();
         }
         else if(object.trim().equalsIgnoreCase("mobile Screen")) {
             selectedObject = 2;
+            current = 0;
             view();
         }
     }
