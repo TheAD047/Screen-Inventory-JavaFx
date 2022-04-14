@@ -50,7 +50,7 @@ public class ComputerScreen extends Screen
      * Set methods with verification for each attribute exclusive to the ComputerScreen class
      */
     public void setsRGB(int $sRGB){
-        if($sRGB >= 1 && this.sRGB <= 100) {
+        if($sRGB >= 1 && $sRGB <= 100) {
             sRGB = $sRGB;
         }
         else{
@@ -68,7 +68,7 @@ public class ComputerScreen extends Screen
             throw new IllegalArgumentException("Response Time can be between 1 and 50 inclusive...");
         }
     }
-    private void setASyncType(String $aSyncType){
+    public void setASyncType(String $aSyncType){
         int check = 0;
 
         //makes the case independent

@@ -91,7 +91,6 @@ public class Inventory {
     /**
      * Return the total number of objects in all the arraylists
      */
-
     public int getTotal(){
         return getScreens() + getMobileScreens() + getComputerScreens();
     }

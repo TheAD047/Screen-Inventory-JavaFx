@@ -63,7 +63,7 @@ public class MobileScreen extends Screen
      * Set methods with verification for each attribute exclusive to this class
      */
     public void setMaxBrightness(int $maxBrightness) {
-        if($maxBrightness >= 200) {
+        if($maxBrightness >= 200 && $maxBrightness <= 550) {
             maxBrightness = $maxBrightness;
         }
         else{

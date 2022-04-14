@@ -1,0 +1,13 @@
+{
+    "Screen" : [
+        {
+            "HorizontalResolution": 1920,
+            "VerticalResolution": 1080,
+            "ScreenSize": 27.2,
+            "Manufacturer": "Samsung",
+            "PanelType": "IPS",
+            "Wattage": 120,
+            "RefreshRate": 144
+        }
+    ]
+}
