@@ -1,4 +1,4 @@
-package com.screen.assignment2;
+package com.screen.assignment2.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
