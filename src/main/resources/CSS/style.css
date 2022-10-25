@@ -1,0 +1,25 @@
+.root{
+    -fx-background-color: rgba(120, 120, 102, 0.7);
+}
+
+.button {
+    -fx-background-color: rgba(20, 100, 170, 0.4);
+    -fx-border-color: rgba(256, 256, 200, 0.5);
+    -fx-border-width: 2px;
+}
+
+.button:hover {
+    -fx-background-color: rgba(120, 170, 170, 0.8);
+}
+
+.combo-box {
+    -fx-background-color: rgba(220, 100, 170, 0.4);
+}
+
+.combo-box:hover {
+    -fx-background-color: rgba(220, 200, 170, 0.8);
+}
+
+.text-field {
+    -fx-background-color: rgba(120, 120, 102, 1);
+}
