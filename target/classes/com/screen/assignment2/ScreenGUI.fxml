@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screen.assignment2.ScreenGUIController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screen.assignment2.Controllers.ScreenGUIController">
    <children>
       <BorderPane layoutX="218.0" layoutY="83.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -30,18 +29,66 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Manufacturer Name" />
-                  <Label fx:id="LabelForManufacturer" text="Label" GridPane.columnIndex="1" />
-                  <Label text="Resolution" GridPane.rowIndex="1" />
-                  <Label fx:id="LabelForResolution" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="Screen Size" GridPane.rowIndex="2" />
-                  <Label fx:id="LabelForScreenSize" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label fx:id="LabelForAttribute00" GridPane.rowIndex="3" />
-                  <Label fx:id="ValueForAttribute00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Label fx:id="LabelForAttribute01" GridPane.rowIndex="4" />
-                  <Label fx:id="ValueForAttribute01" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Label fx:id="LabelForTotalSelectedObject" text="Label" GridPane.rowIndex="5" />
-                  <Label fx:id="ValueForTotalSelectedObject" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <BorderPane>
+                     <center>
+                        <Label text="Manufacturer Name" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1">
+                     <center>
+                        <Label fx:id="LabelForManufacturer" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="1">
+                     <center>
+                        <Label text="Resolution" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <Label fx:id="LabelForResolution" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="2">
+                     <center>
+                        <Label text="Screen Size" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <center>
+                        <Label fx:id="LabelForScreenSize" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="3">
+                     <center>
+                        <Label fx:id="LabelForAttribute00" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <center>
+                        <Label fx:id="ValueForAttribute00" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="4">
+                     <center>
+                        <Label fx:id="LabelForAttribute01" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <center>
+                        <Label fx:id="ValueForAttribute01" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="5">
+                     <center>
+                        <Label fx:id="LabelForTotalSelectedObject" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <center>
+                        <Label fx:id="ValueForTotalSelectedObject" text="Label" />
+                     </center>
+                  </BorderPane>
                </children>
             </GridPane>
          </left>
@@ -67,29 +114,88 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Panel Type" />
-                  <Label fx:id="LabelForPanelType" text="Label" GridPane.columnIndex="1" />
-                  <Label text="Wattage" GridPane.rowIndex="1" />
-                  <Label fx:id="LabelForWattage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="Refresh Rate" GridPane.rowIndex="2" />
-                  <Label fx:id="LabelForRefreshRate" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label fx:id="LabelForAttribute02" GridPane.rowIndex="3" />
-                  <Label fx:id="ValueForAttribute02" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Label fx:id="LabelForAttribute03" GridPane.rowIndex="4" />
-                  <Label fx:id="ValueForAttribute03" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Label text="Total Inventory" GridPane.rowIndex="5" />
-                  <Label fx:id="LabelForTotalInventory" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <BorderPane>
+                     <center>
+                        <Label text="Panel Type" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1">
+                     <center>
+                        <Label fx:id="LabelForPanelType" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="1">
+                     <center>
+                        <Label text="Wattage" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <Label fx:id="LabelForWattage" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="2">
+                     <center>
+                        <Label text="Refresh Rate" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <center>
+                        <Label fx:id="LabelForRefreshRate" text="Label" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="3">
+                     <center>
+                        <Label fx:id="LabelForAttribute02" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <center>
+                        <Label fx:id="ValueForAttribute02" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="4">
+                     <center>
+                        <Label fx:id="LabelForAttribute03" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <center>
+                        <Label fx:id="ValueForAttribute03" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.rowIndex="5">
+                     <center>
+                        <Label text="Total Inventory" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <center>
+                        <Label fx:id="LabelForTotalInventory" text="Label" />
+                     </center>
+                  </BorderPane>
                </children>
             </GridPane>
          </right>
          <bottom>
-            <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-              <buttons>
-                <Button mnemonicParsing="false" onAction="#ViewPrevScreen" text="Previous" />
-                  <Button mnemonicParsing="false" onAction="#ViewNextScreen" prefHeight="26.0" text="Next" textAlignment="CENTER" />
-                  <ComboBox fx:id="ComboBox" onAction="#SelectObject" prefHeight="26.0" prefWidth="242.0" promptText="Screen" />
-              </buttons>
-            </ButtonBar>
+            <BorderPane BorderPane.alignment="CENTER">
+               <bottom>
+                  <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button mnemonicParsing="false" onAction="#ViewPrevScreen" prefHeight="26.0" prefWidth="388.0" text="Previous" />
+                        <Button mnemonicParsing="false" onAction="#ViewNextScreen" prefHeight="26.0" text="Next" textAlignment="CENTER" />
+                    </buttons>
+                  </ButtonBar>
+               </bottom>
+               <top>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <buttons>
+                        <ComboBox fx:id="ComboBox" onAction="#SelectObject" prefHeight="34.0" prefWidth="314.0" promptText="Screen" />
+                        <Button fx:id="createObjectBTN" mnemonicParsing="false" onAction="#getCreateView" text="Create" />
+                     </buttons>
+                  </ButtonBar>
+               </top>
+            </BorderPane>
          </bottom>
       </BorderPane>
    </children>

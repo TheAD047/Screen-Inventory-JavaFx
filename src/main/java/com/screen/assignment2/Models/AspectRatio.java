@@ -1,4 +1,4 @@
-package com.screen.assignment2;
+package com.screen.assignment2.Models;
 
 /**Name: Arin Dhiman
  * Student no.: 2004897090
@@ -12,18 +12,20 @@ public class AspectRatio
     /**
      * Two attributes for aspect ratio
      */
+    private int ID;
     private int horizontal;
     private int vertical;
 
     /**
      * Constructor with the following
-     * @param $horizontal
-     * @param $vertical
+     * @param horizontal
+     * @param vertical
      */
-    public AspectRatio(int $horizontal, int $vertical)
+    public AspectRatio(int ID, int horizontal, int vertical)
     {
-        setHorizontal($horizontal);
-        setVertical($vertical);
+        setID(ID);
+        setHorizontal(horizontal);
+        setVertical(vertical);
     }
 
     /**
@@ -35,6 +37,7 @@ public class AspectRatio
     public int getVertical() {
         return vertical;
     }
+    public int getID(){return ID;}
 
     /**
      * Set methods for each attribute with verification
@@ -55,11 +58,20 @@ public class AspectRatio
             throw new IllegalArgumentException("The vertical component cant be less than 1...");
         }
     }
+    public void setID(int ID) {
+        if(ID >= 1) {
+            this.ID = ID;
+        }
+        else {
+            throw new IllegalArgumentException("ID cant be less than 1...");
+        }
+    }
 
     /**
      * ToString method for special string representation for aspect ratio object
      */
-    public String ToString(){
+    @Override
+    public String toString(){
         return horizontal + " : " + vertical;
     }
 

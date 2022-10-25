@@ -1,6 +1,7 @@
-package com.screen.assignment2;
+package com.screen.assignment2.Models;
 
-import java.util.Locale;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**Name: Arin Dhiman
  * Student no.: 2004897090
@@ -17,7 +18,7 @@ public class MobileScreen extends Screen
     private int maxBrightness;
     private int pixelDensity;
     private String cameraSupport;
-    private String[] supportList = {"PUNCH-HOLE","NOTCH","UNDER-SCREEN", "NONE"};
+    private static String[] supportList = {"PUNCH-HOLE","NOTCH","UNDER-SCREEN", "NONE"};
 
     /**
      * Constructor to pass in attributes for parent class and this derived class
@@ -58,6 +59,10 @@ public class MobileScreen extends Screen
     public String getCameraSupport() {
         return cameraSupport;
     }
+    public static String[] getSupportList() {
+        Collections.sort(Arrays.asList(supportList));
+        return supportList;
+    }
 
     /**
      * Set methods with verification for each attribute exclusive to this class
@@ -97,4 +102,20 @@ public class MobileScreen extends Screen
             throw new IllegalArgumentException("Camera Support is not correct...");
         }
      }
+
+    @Override
+    public String toString() {
+        return "MobileScreen{" +
+                "verticalResolution=" + getVerticalResolution() +
+                ", horizontalResolution=" + getHorizontalResolution()+
+                ", screenSize=" + getScreenSize() +
+                ", manufacturer='" + getManufacturer() + '\'' +
+                ", panelType='" + getPanelType() + '\'' +
+                ", wattage=" + getWattage() +
+                ", refreshRate=" + getRefreshRate() +
+                ", maxBrightness=" + maxBrightness +
+                ", pixelDensity=" + pixelDensity +
+                ", cameraSupport='" + cameraSupport + '\'' +
+                '}';
+    }
 }

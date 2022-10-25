@@ -1,4 +1,9 @@
-package com.screen.assignment2;
+package com.screen.assignment2.Models;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**Name: Arin Dhiman
  * Student no.: 2004897090
@@ -15,7 +20,7 @@ public class ComputerScreen extends Screen
     private AspectRatio aspectRatio;
     private int responseTime;
     private String aSyncType;
-    private String[] aSyncList = {"GSYNC", "FREESYNC","NONE","FREESYNC2","ADAPTIVESYNC"};
+    private static String[] aSyncList = {"GSYNC", "FREESYNC","NONE","FREESYNC2","ADAPTIVESYNC"};
 
     /**
      * Constructor which passes attributes for parent class and additional attributes introduced in this class
@@ -105,5 +110,27 @@ public class ComputerScreen extends Screen
     }
     public String getaSyncType() {
         return aSyncType;
+    }
+    public static String[] getaSyncList() {
+        Collections.sort(Arrays.asList(aSyncList));
+        return aSyncList;
+    }
+
+    @Override
+    public String toString() {
+        return "ComputerScreen{" +
+                "verticalResolution=" + getVerticalResolution() +
+                ", horizontalResolution=" + getHorizontalResolution()+
+                ", screenSize=" + getScreenSize() +
+                ", manufacturer='" + getManufacturer() + '\'' +
+                ", panelType='" + getPanelType() + '\'' +
+                ", wattage=" + getWattage() +
+                ", refreshRate=" + getRefreshRate() +
+                ", sRGB=" + sRGB +
+                ", aspectRatio=" + aspectRatio +
+                ", responseTime=" + responseTime +
+                ", aSyncType='" + aSyncType + '\'' +
+                ", aSyncList=" + Arrays.toString(aSyncList) +
+                '}';
     }
 }

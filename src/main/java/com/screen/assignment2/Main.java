@@ -1,8 +1,13 @@
 package com.screen.assignment2;
 
+import com.screen.assignment2.Models.ComputerScreen;
+import com.screen.assignment2.Models.MobileScreen;
+import com.screen.assignment2.Models.Screen;
+import com.screen.assignment2.Util.DBUtil;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,7 +16,6 @@ import java.io.IOException;
 public class Main extends Application{
 
     public static void main(String[] args)  {
-        //FileHandler response = FileHandler.getScreenFromFile("ObjectList.json");
         launch();
     }
 

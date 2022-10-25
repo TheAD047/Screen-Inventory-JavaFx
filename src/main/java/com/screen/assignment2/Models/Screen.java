@@ -1,8 +1,10 @@
-package com.screen.assignment2;
+package com.screen.assignment2.Models;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.Arrays;
+import java.util.Collections;
 
-/**Name: Arin Dhiman
+/**
+ * Name: Arin Dhiman
  * Student no.: 2004897090
  * Date: 02/04/2022 Sat
  * Description: This class serves as a parent or abstract class for the other two derived classes
@@ -19,7 +21,7 @@ public class Screen
     private String panelType;
     private int wattage;
     private int refreshRate;
-    private String[] panelList = {"TN", "VA", "IPS", "OLED", "LCD", "LED", "AMOLED"};
+    private static String[] panelList = {"TN", "VA", "IPS", "OLED", "LCD", "LED", "AMOLED"};
 
     /* Default constructor to enable inheritance
     **/
@@ -68,6 +70,10 @@ public class Screen
     public int getRefreshRate()
     {
         return refreshRate;
+    }
+    public static String[] getPanelList() {
+        Collections.sort(Arrays.asList(panelList));
+        return panelList;
     }
 
     /* Setter methods for every attribute (except for panelList) with verification
@@ -154,5 +160,18 @@ public class Screen
      */
     public String getResolutionString() {
         return horizontalResolution + " x " + verticalResolution;
+    }
+
+    @Override
+    public String toString() {
+        return "Screen{" +
+                "verticalResolution=" + verticalResolution +
+                ", horizontalResolution=" + horizontalResolution +
+                ", screenSize=" + screenSize +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", panelType='" + panelType + '\'' +
+                ", wattage=" + wattage +
+                ", refreshRate=" + refreshRate +
+                '}';
     }
 }

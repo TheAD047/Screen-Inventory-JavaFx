@@ -1,5 +1,7 @@
 package com.screen.assignment2;
 
+import com.screen.assignment2.Models.AspectRatio;
+import com.screen.assignment2.Models.ComputerScreen;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +15,7 @@ class ComputerScreenTest {
 
     @BeforeEach
     void setUp() {
-        aspectRatio = new AspectRatio(16,9);
+        aspectRatio = new AspectRatio(1,16,9);
         computerScreen = new ComputerScreen(1440, 2560, 24.5, "Acer Predator", "VA", 135, 240, 75, aspectRatio, 2, "FREESYNC");
     }
 

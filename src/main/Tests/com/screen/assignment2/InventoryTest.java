@@ -1,5 +1,6 @@
 package com.screen.assignment2;
 
+import com.screen.assignment2.Util.Inventory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

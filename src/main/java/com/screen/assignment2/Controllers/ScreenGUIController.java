@@ -1,10 +1,15 @@
-package com.screen.assignment2;
+package com.screen.assignment2.Controllers;
 
+import com.screen.assignment2.Util.Inventory;
+import com.screen.assignment2.Models.ComputerScreen;
+import com.screen.assignment2.Models.MobileScreen;
+import com.screen.assignment2.Models.Screen;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ComboBox;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -34,7 +39,6 @@ public class ScreenGUIController implements Initializable {
 
     @FXML
     private Label ValueForTotalSelectedObject;
-
 
     @FXML
     private Label LabelForAttribute00;
@@ -82,7 +86,10 @@ public class ScreenGUIController implements Initializable {
     private Label ValueForAttribute03;
 
     @FXML
-    private javafx.scene.control.ComboBox ComboBox;
+    private ComboBox ComboBox;
+
+    @FXML
+    private Button createObjectBTN;
 
     /**
      * inventory object to handle collections
@@ -207,7 +214,7 @@ public class ScreenGUIController implements Initializable {
             LabelForAttribute02.setText("A Sync Type");
             LabelForAttribute03.setText("Response Time (GTG)");
             ValueForAttribute00.setText(Integer.toString(currentScreen.getsRGB()));
-            ValueForAttribute01.setText(currentScreen.getAspectRatio().ToString());
+            ValueForAttribute01.setText(currentScreen.getAspectRatio().toString());
             ValueForAttribute02.setText(currentScreen.getaSyncType());
             ValueForAttribute03.setText(Integer.toString(currentScreen.getResponseTime()));
             LabelForTotalSelectedObject.setText("Total Computer Screens");
@@ -259,6 +266,16 @@ public class ScreenGUIController implements Initializable {
             selectedObject = 2;
             current = 0;
             view();
+        }
+    }
+
+    @FXML
+    void getCreateView(ActionEvent event) {
+        try {
+            SceneController.changeScene(event, "Create");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
