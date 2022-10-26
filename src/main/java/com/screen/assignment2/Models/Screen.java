@@ -5,8 +5,6 @@ import java.util.Collections;
 
 /**
  * Name: Arin Dhiman
- * Student no.: 2004897090
- * Date: 02/04/2022 Sat
  * Description: This class serves as a parent or abstract class for the other two derived classes
  * */
 

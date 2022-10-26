@@ -18,6 +18,11 @@ import javafx.scene.control.ComboBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/*
+ * Name: Arin Dhiman
+ * Description: Controller Class for Create.fxml file
+ * */
+
 public class CreateController implements Initializable {
 
     private int selectedObject = 0;
@@ -82,6 +87,9 @@ public class CreateController implements Initializable {
     @FXML
     private TextField fieldForAttribute03;
 
+    /**
+     * Change the view to provide the correct fields and lalbels for object creation
+     */
     @FXML
     void SelectObject(ActionEvent event) {
         String object = ComboBox.getSelectionModel().getSelectedItem().toString();
@@ -100,6 +108,9 @@ public class CreateController implements Initializable {
         }
     }
 
+    /**
+     * Create an object based on the value of the combo box to decide which one to create
+     */
     @FXML
     void createObject(ActionEvent event) {
         if(selectedObject == 0) {
@@ -174,6 +185,9 @@ public class CreateController implements Initializable {
         }
     }
 
+    /**
+     * Go back to Inventory View
+     */
     @FXML
     void getInventoryView(ActionEvent event) {
         try {
@@ -184,6 +198,9 @@ public class CreateController implements Initializable {
         }
     }
 
+    /**
+     * Prepare the view by adding listeners so that invalid values can't be passed in
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ComboBox.getItems().addAll("Screen", "Computer Screen", "Mobile Screen");
@@ -284,11 +301,14 @@ public class CreateController implements Initializable {
         view();
     }
 
+    /**
+     * Controls the view so that the labels have the proper values
+     */
     void view() {
         if(selectedObject == 0) {
             //if the selected object is Screen
 
-            LabelForTop.setText("Screen Details");
+            LabelForTop.setText("Create A Screen");
             LabelForAttribute00.setText("");
             LabelForAttribute01.setText("");
             LabelForAttribute02.setText("");
@@ -303,7 +323,7 @@ public class CreateController implements Initializable {
         else if(selectedObject == 1){
             //if the selected object is Computer Screen
 
-            LabelForTop.setText("Computer Screen Details");
+            LabelForTop.setText("Create A Computer Screen");
             LabelForAttribute00.setText("sRgb Coverage (%)");
             LabelForAttribute01.setText("Aspect Ratio");
             LabelForAttribute02.setText("A Sync Type");
@@ -321,7 +341,7 @@ public class CreateController implements Initializable {
         else if(selectedObject == 2) {
             //if the selected object is Mobile Screen
 
-            LabelForTop.setText("Mobile Screen Details");
+            LabelForTop.setText("Create A Mobile Screen");
             LabelForAttribute00.setText("Max Brightness");
             LabelForAttribute01.setText("Pixel Density (PPI)");
             LabelForAttribute02.setText("Camera Support");

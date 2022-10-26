@@ -7,6 +7,11 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/*
+ * Name: Arin Dhiman
+ * Description: The sole purpose of this class is to change the Scene in a stage
+ * */
+
 public class SceneController {
     public static void changeScene(ActionEvent event, String name) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(name + ".fxml"));

@@ -1,8 +1,6 @@
 package com.screen.assignment2.Models;
 
 /**Name: Arin Dhiman
- * Student no.: 2004897090
- * Date: 07/04/2022 Sat
  * Description: This class is built for aspect ratio attribute in Computer Screen class, this can be used multiple times since aspect ratios
  *              are very often common amongst a majority of screens unlike resolution
  * */

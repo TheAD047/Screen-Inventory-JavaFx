@@ -8,11 +8,19 @@ import com.screen.assignment2.Models.Screen;
 import java.sql.*;
 import java.util.ArrayList;
 
+/*
+ * Name: Arin Dhiman
+ * Description: A Utility Class to manage Database operations
+ * */
+
 public class DBUtil {
     private static String user = "root";
     private static String password = "root";
     private static String url = "jdbc:mysql://127.0.01/Screens";
 
+    /**
+     * returns a Connection object, this was made private so that not everyone can open a connection
+     */
     private static Connection startConnection() {
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
@@ -25,6 +33,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Method to get all the aspect ratios
+     */
     public static ArrayList<AspectRatio> getAspectRatio(){
         String sql = "SELECT * FROM aspect_ratio";
         ArrayList<AspectRatio> aspectRatios = new ArrayList<>();
@@ -53,6 +64,10 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Method to return one Aspect Ratio object which has the same ID as
+     * @param ID
+     */
     public static AspectRatio getAspectRatio(int ID){
         String sql = "SELECT * FROM aspect_ratio WHERE ID = ?";
         AspectRatio aspectRatio = null;
@@ -83,6 +98,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Gets all the screens in the Database
+     */
     public static ArrayList<Screen> getScreens(){
         String sql = "SELECT * FROM Screens";
         ArrayList<Screen> screens = new ArrayList<>();
@@ -114,6 +132,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Gets all the computer screens in the Database
+     */
     public static ArrayList<ComputerScreen> getComputerScreens() {
         String sql = "SELECT * FROM Computer_screens";
         ArrayList<ComputerScreen> computerScreens = new ArrayList<>();
@@ -149,6 +170,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Gets all the mobile screens in the Database
+     */
     public static ArrayList<MobileScreen> getMobileScreens(){
         String sql = "SELECT * FROM Mobile_screens";
         ArrayList<MobileScreen> mobileScreens = new ArrayList<>();
@@ -184,6 +208,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Method to insert a valid screen object into the Database
+     */
     public static void insertScreen(Screen screen) {
         String sql = "INSERT INTO Screens(vertical_res, horizontal_res, screen_size, manufacturer, panel_type, wattage, refresh_rate )" +
                 "VALUES(?,?,?,?,?,?,?)";
@@ -208,6 +235,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Method to insert a valid computer screen object into the Database
+     */
     public static void insertComputerScreen(ComputerScreen screen) {
         String sql = "INSERT INTO Computer_screens(vertical_res, horizontal_res, screen_size, manufacturer, panel_type, wattage, refresh_rate, sRGB, response_time, async_type, ratio_ID)" +
                 "VALUES(?,?,?,?,?,?,?,?,?,?,?)";
@@ -237,6 +267,9 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Method to insert a valid mobile screen object into the Database
+     */
     public static void insertMobileScreen(MobileScreen screen) {
         String sql = "INSERT INTO Mobile_screens(vertical_res, horizontal_res, screen_size, manufacturer, panel_type, wattage, refresh_rate, max_brightness, pixel_density, camera_support)" +
                 "VALUES(?,?,?,?,?,?,?,?,?,?)";

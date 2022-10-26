@@ -6,8 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 /**Name: Arin Dhiman
- * Student no.: 2004897090
- * Date: 07/04/2022
  * Description: This class is one of the derived classes from parent class Screen
  * */
 

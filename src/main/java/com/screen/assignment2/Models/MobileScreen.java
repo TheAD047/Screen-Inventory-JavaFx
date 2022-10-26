@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**Name: Arin Dhiman
- * Student no.: 2004897090
- * Date: 02/04/2022
  * Description: This is a derived class from Screen paretn class
  * */
 

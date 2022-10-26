@@ -14,9 +14,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-/**Name: Arin Dhiman
- * Student no.: 2004897090
- * Date: 12/04/2022
+/*
+ * Name: Arin Dhiman
  * Description: This class is a controller for the view as per the MVC model
  * */
 
